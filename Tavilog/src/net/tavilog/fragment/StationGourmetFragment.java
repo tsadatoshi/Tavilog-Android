@@ -171,27 +171,26 @@ public class StationGourmetFragment extends StationFragment{
         	    if (xpp != null) {
 	            	try {
 	            		List<GnaviShopResponse> gnList = GnaviShopResponse.createResultList(xpp);
-	            		String aa = null;
-	            		aa = "test";
-	            		/*View gnLayout;
+
+	            		View gnLayout;
 						TextView textViewListGNShop;
 						TextView textViewListGNAccess;
 						TextView textViewListGNCategory;
 						ImageView imageViewListGNImage;
 						Button btnGN;
 	            		for (GnaviShopResponse gnaviShop : gnList) {
-	            			gnLayout = mInflater.inflate(R.layout.parts_list_hotpepper, null);
-	            			textViewListHPShop = (TextView) gnLayout.findViewById(R.id.textViewListHPShop);
-	            			textViewListHPShop.setText(hotpepperShop.getShopName());
-	            			textViewListHPAccess = (TextView) hpLayout.findViewById(R.id.textViewListHPAccess);
-	            			textViewListHPAccess.setText(hotpepperShop.getMbAccess());
-	            			textViewListHPCategory = (TextView) hpLayout.findViewById(R.id.textViewListHPCategory);
-	            			textViewListHPCategory.setText(hotpepperShop.getGenreName());
-	            			imageViewListHPImage = (ImageView) hpLayout.findViewById(R.id.imageViewListHPImage);
-	            			imageViewListHPImage.setImageDrawable(HtmlUtil.getUrlDrawable(getActivity() ,hotpepperShop.getPhotoUrl()));
-	            			couponUrl = hotpepperShop.getCouponUrl();
-	            			btnHP = (Button) hpLayout.findViewById(R.id.buttonHP);
-	            			btnHP.setOnClickListener(new OnClickListener() {
+	            			gnLayout = mInflater.inflate(R.layout.parts_list_gnavi, null);
+	            			textViewListGNShop = (TextView) gnLayout.findViewById(R.id.textViewListGNShop);
+	            			textViewListGNShop.setText(gnaviShop.getShopName());
+	            			textViewListGNAccess = (TextView) gnLayout.findViewById(R.id.textViewListGNAccess);
+	            			textViewListGNAccess.setText(gnaviShop.getMbAccess());
+	            			textViewListGNCategory = (TextView) gnLayout.findViewById(R.id.textViewListGNCategory);
+	            			textViewListGNCategory.setText(gnaviShop.getCategory());
+	            			imageViewListGNImage = (ImageView) gnLayout.findViewById(R.id.imageViewListGNImage);
+	            			imageViewListGNImage.setImageDrawable(HtmlUtil.getUrlDrawable(getActivity() ,gnaviShop.getPhotoUrl()));
+	            			couponUrl = gnaviShop.getShopUrl();
+	            			btnGN = (Button) gnLayout.findViewById(R.id.buttonGN);
+	            			btnGN.setOnClickListener(new OnClickListener() {
 	            				String url = couponUrl;
 								@Override
 								public void onClick(View v) {
@@ -199,6 +198,7 @@ public class StationGourmetFragment extends StationFragment{
 									HtmlUtil.callWebSite(getActivity(), url);
 								}
 							});
+	            			/*
 	            			if(gMap != null){
 		            			MarkerOptions markerOptions = new MarkerOptions();
 		            			BitmapDescriptor icon = BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN);
@@ -206,9 +206,9 @@ public class StationGourmetFragment extends StationFragment{
 		            			markerOptions.position(new LatLng(Double.parseDouble(hotpepperShop.getLatitude()) , Double.parseDouble(hotpepperShop.getLongitude())));
 		            			markerOptions.title(hotpepperShop.getShopName());
 		            			gMap.addMarker(markerOptions);
-	            			}
-	            			linearLayoutHPArea.addView(hpLayout);
-	            		}*/
+	            			}*/
+	            			linearLayoutGNArea.addView(gnLayout);
+	            		}
 	            	} catch (Exception e) {
 						e.printStackTrace();
 					}

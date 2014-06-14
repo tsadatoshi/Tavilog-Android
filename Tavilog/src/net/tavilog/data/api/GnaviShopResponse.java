@@ -80,7 +80,12 @@ public class GnaviShopResponse {
 					response = new GnaviShopResponse();
 				} else {
 					if(response != null){
-						response.setParam(xpp);
+						try {
+							response.setParam(xpp);
+						} catch (Exception e) {
+							Log.w("GNAVI-RESPONSEERROR", tag + "の解析に失敗しました");
+						}
+
 					}
 				}
 			} else if(eventType == XmlPullParser.END_TAG){
