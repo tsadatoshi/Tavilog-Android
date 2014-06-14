@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	android:orientation="horizontal"
+	android:background="@drawable/background_rest"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	<LinearLayout
+		android:layout_width="0dp"
+		android:layout_height="match_parent"
+		android:layout_weight="6"
+		android:orientation="vertical">
+		<!-- HotPepper -->
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="@drawable/background_ajaxlist"
+			android:layout_marginBottom="5dp"
+			android:orientation="vertical">
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="20dp"
+				android:orientation="horizontal">
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="HotPepper"
+					android:textColor="#ffa500" />
+			</LinearLayout>
+			<HorizontalScrollView
+				android:id="@+id/scrollViewHP"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:visibility="gone">
+				<LinearLayout
+					android:id="@+id/linearLayoutHPArea"
+					android:layout_width="wrap_content"
+					android:layout_height="@dimen/ajax_list_height"
+					android:orientation="horizontal"></LinearLayout>
+			</HorizontalScrollView>
+			<FrameLayout
+				android:id="@+id/frameLayoutHP"
+				android:layout_width="match_parent"
+				android:layout_height="@dimen/ajax_list_height">
+				<ProgressBar
+					style="?android:attr/progressBarStyleLarge"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center" />
+			</FrameLayout>
+		</LinearLayout>
+		<!-- GourNavi -->
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="@drawable/background_ajaxlist"
+			android:orientation="vertical">
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="20dp"
+				android:orientation="horizontal">
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="ぐるなび"
+					android:textColor="#ff00ff" />
+			</LinearLayout>
+			<HorizontalScrollView
+				android:id="@+id/scrollViewGN"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:visibility="gone">
+				<LinearLayout
+					android:id="@+id/linearLayoutGNArea"
+					android:layout_width="wrap_content"
+					android:layout_height="@dimen/ajax_list_height"
+					android:orientation="horizontal"></LinearLayout>
+			</HorizontalScrollView>
+			<FrameLayout
+				android:id="@+id/frameLayoutGN"
+				android:layout_width="match_parent"
+				android:layout_height="@dimen/ajax_list_height">
+				<ProgressBar
+					style="?android:attr/progressBarStyleLarge"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center" />
+			</FrameLayout>
+		</LinearLayout>
+	</LinearLayout>
+
+	<FrameLayout
+		android:layout_width="0dp"
+		android:layout_weight="4"
+		android:layout_height="match_parent"
+		android:layout_marginLeft="@dimen/space_list_map"
+		android:background="@drawable/radiusbox">
+
+		<fragment
+			android:id="@+id/mapStationInfo"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			class="com.google.android.gms.maps.MapFragment" />
+
+	</FrameLayout>
+</LinearLayout>

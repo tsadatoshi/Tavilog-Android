@@ -1,0 +1,28 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="base_padding">8dp</dimen>
+	<dimen name="base_radius">10dp</dimen>
+	<dimen name="base_border">1dp</dimen>
+    <dimen name="large_font">24sp</dimen>
+    <dimen name="normal_font">18sp</dimen>
+    <dimen name="normal_small_font">16sp</dimen>
+    <dimen name="small_font">14sp</dimen>
+    <dimen name="minimum_font">12sp</dimen>
+
+    <dimen name="space_list_map">5dp</dimen>
+
+    <!-- station ajax list -->
+    <dimen name="ajax_result_picture">90dp</dimen>
+    <dimen name="ajax_list_width">280dp</dimen>
+    <dimen name="ajax_list_height">150dp</dimen>
+    <dimen name="ajax_result_text_start">100dp</dimen>
+    <dimen name="ajax_result_access_start">-3dp</dimen>
+    <dimen name="ajax_result_access_size">18dp</dimen>
+    <dimen name="ajax_result_btn_width">70dp</dimen>
+    <dimen name="ajax_result_btn_height">32dp</dimen>
+
+</resources>

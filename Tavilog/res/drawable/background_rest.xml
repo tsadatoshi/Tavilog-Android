@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:shape="rectangle">
+	<solid android:color="@color/bg_station_rest"/>
+	<corners
+		android:bottomRightRadius="@dimen/base_radius"
+		android:bottomLeftRadius="@dimen/base_radius"
+		android:topLeftRadius="@dimen/base_radius"
+		android:topRightRadius="@dimen/base_radius" />
+	<padding
+		android:left="@dimen/base_padding"
+		android:top="@dimen/base_padding"
+		android:right="@dimen/base_padding"
+		android:bottom="@dimen/base_padding" />
+</shape>

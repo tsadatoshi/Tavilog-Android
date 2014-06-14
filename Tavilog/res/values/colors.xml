@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- common -->
+    <color name="base_text">#000000</color>
+    <color name="gray_text">#808080</color>
+    <color name="btn_base_text">#ffffff</color>
+    <!-- station -->
+    <color name="bg_station_rest">#baadff2f</color>
+    <!-- station ajax list -->
+    <color name="bg_station_ajaxlist">#aaffffff</color>
+    <color name="bg_station_ajaxlist_item">#ccececec</color>
+    <color name="border_station_ajaxlist">#9f9f9f</color>
+    
+    <color name="cal_txt_weekday">#424242</color>
+    <color name="cal_txt_saturday">#0000cd</color>
+    <color name="cal_txt_sunday">#dc143c</color>
+</resources>

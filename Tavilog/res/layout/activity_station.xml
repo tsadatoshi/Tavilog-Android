@@ -1,0 +1,56 @@
+<RelativeLayout
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:padding="@dimen/base_padding"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:background="@drawable/background_station"
+	xmlns:tools="http://schemas.android.com/tools"
+	tools:context=".StationActivity">
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical">
+		<LinearLayout
+			android:id="@+id/linearLayoutStationTitle"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:padding="@dimen/base_padding">
+			<TextView
+				android:id="@+id/textViewStationTitle"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="函館駅"
+				android:textColor="@android:color/white"
+				android:textSize="@dimen/large_font" />
+			<LinearLayout
+				android:id="@+id/linearLayoutStationMenu"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:gravity="right">
+				<FrameLayout
+					android:id="@+id/stationMenuGourmet"
+					android:layout_width="100dp"
+					android:layout_height="match_parent"
+					android:background="@drawable/background_rest">
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="Gourmet" />
+				</FrameLayout>
+			</LinearLayout>
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical">
+			<fragment
+				android:id="@+id/fragment1"
+				android:name="net.tavilog.fragment.StationGourmetFragment"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent" />
+		</LinearLayout>
+	</LinearLayout>
+
+</RelativeLayout>
