@@ -1,14 +1,6 @@
 package net.tavilog.fragment;
 
-import java.util.LinkedHashMap;
 import java.util.List;
-import java.util.Map;
-
-import org.xmlpull.v1.XmlPullParser;
-
-import android.util.Xml;
-
-import org.xmlpull.v1.XmlPullParserException;
 
 import net.tavilog.R;
 import net.tavilog.data.api.GNaviShopRequest;
@@ -19,11 +11,9 @@ import net.tavilog.exception.MapInitException;
 import net.tavilog.util.HtmlUtil;
 
 import org.json.JSONObject;
+import org.xmlpull.v1.XmlPullParser;
 
-import android.app.Fragment;
 import android.os.Bundle;
-import android.os.StrictMode;
-import android.util.Xml;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -33,18 +23,12 @@ import android.widget.FrameLayout;
 import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.androidquery.AQuery;
 import com.androidquery.callback.AjaxCallback;
 import com.androidquery.callback.AjaxStatus;
 import com.androidquery.util.AQUtility;
-import com.androidquery.util.XmlDom;
-import com.google.android.gms.maps.CameraUpdateFactory;
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
@@ -135,7 +119,7 @@ public class StationGourmetFragment extends StationFragment{
 							});
 	            			if(gMap != null){
 		            			MarkerOptions markerOptions = new MarkerOptions();
-		            			BitmapDescriptor icon = BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN);
+		            			BitmapDescriptor icon = BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE);
 		            			markerOptions.icon(icon);
 		            			markerOptions.position(new LatLng(Double.parseDouble(hotpepperShop.getLatitude()) , Double.parseDouble(hotpepperShop.getLongitude())));
 		            			markerOptions.title(hotpepperShop.getShopName());
@@ -198,15 +182,14 @@ public class StationGourmetFragment extends StationFragment{
 									HtmlUtil.callWebSite(getActivity(), url);
 								}
 							});
-	            			/*
 	            			if(gMap != null){
 		            			MarkerOptions markerOptions = new MarkerOptions();
-		            			BitmapDescriptor icon = BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN);
+		            			BitmapDescriptor icon = BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ROSE);
 		            			markerOptions.icon(icon);
-		            			markerOptions.position(new LatLng(Double.parseDouble(hotpepperShop.getLatitude()) , Double.parseDouble(hotpepperShop.getLongitude())));
-		            			markerOptions.title(hotpepperShop.getShopName());
+		            			markerOptions.position(new LatLng(Double.parseDouble(gnaviShop.getLatitude()) , Double.parseDouble(gnaviShop.getLongitude())));
+		            			markerOptions.title(gnaviShop.getShopName());
 		            			gMap.addMarker(markerOptions);
-	            			}*/
+	            			}
 	            			linearLayoutGNArea.addView(gnLayout);
 	            		}
 	            	} catch (Exception e) {
@@ -238,50 +221,6 @@ public class StationGourmetFragment extends StationFragment{
         	        }catch(Exception e){
         	                AQUtility.report(e);
         	        }
-
-
-	            	try {
-
-
-
-	            		List<HotpepperShopResponse> hpList = HotpepperShopResponse.createResultList(null);
-	            		View hpLayout;
-						TextView textViewListHPShop;
-						TextView textViewListHPAccess;
-						TextView textViewListHPCategory;
-						ImageView imageViewListHPImage;
-						Button btnHP;
-	            		for (HotpepperShopResponse hotpepperShop : hpList) {
-	            			hpLayout = mInflater.inflate(R.layout.parts_list_hotpepper, null);
-	            			textViewListHPShop = (TextView) hpLayout.findViewById(R.id.textViewListHPShop);
-	            			textViewListHPShop.setText(hotpepperShop.getShopName());
-	            			textViewListHPAccess = (TextView) hpLayout.findViewById(R.id.textViewListHPAccess);
-	            			textViewListHPAccess.setText(hotpepperShop.getMbAccess());
-	            			textViewListHPCategory = (TextView) hpLayout.findViewById(R.id.textViewListHPCategory);
-	            			textViewListHPCategory.setText(hotpepperShop.getGenreName());
-	            			imageViewListHPImage = (ImageView) hpLayout.findViewById(R.id.imageViewListHPImage);
-	            			imageViewListHPImage.setImageDrawable(HtmlUtil.getUrlDrawable(getActivity() ,hotpepperShop.getPhotoUrl()));
-	            			couponUrl = hotpepperShop.getCouponUrl();
-	            			btnHP = (Button) hpLayout.findViewById(R.id.buttonHP);
-	            			btnHP.setOnClickListener(new OnClickListener() {
-	            				String url = couponUrl;
-								@Override
-								public void onClick(View v) {
-									// クーポンページを開く
-									HtmlUtil.callWebSite(getActivity(), url);
-								}
-							});
-	            			MarkerOptions markerOptions = new MarkerOptions();
-	            			BitmapDescriptor icon = BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN);
-	            			markerOptions.icon(icon);
-	            			markerOptions.position(new LatLng(Double.parseDouble(hotpepperShop.getLatitude()) , Double.parseDouble(hotpepperShop.getLongitude())));
-	            			markerOptions.title(hotpepperShop.getShopName());
-	            			gMap.addMarker(markerOptions);
-	            			//linearLayoutHPArea.addView(hpLayout);
-	            		}
-	            	} catch (Exception e) {
-						e.printStackTrace();
-					}
 	            } else {
 	                // ajax error, show error code
 	                Toast.makeText(aQuery.getContext(), "Error:" + status.getCode(), Toast.LENGTH_LONG)

@@ -4,9 +4,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
@@ -61,7 +58,7 @@ public class GnaviShopResponse {
 		} else if("url_mobile".equals(tag)){
 			shopUrlMb = xpp.nextText();
 		} else if("image_url".equals(tag)){
-			category = xpp.nextText();
+			shopImageUrl = xpp.nextText();
 		} else if("url".equals(tag)){
 			shopUrl = xpp.nextText();
 		} else if("address".equals(tag)){

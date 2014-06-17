@@ -32,6 +32,8 @@
 	<!-- 位置情報の取得 (GPS経由) -->
 	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+
 	<uses-feature
 		android:glEsVersion="0x00020000"
 		android:required="true" />
@@ -43,7 +45,7 @@
 		android:theme="@style/AppTheme">
 			<meta-data
 		android:name="com.google.android.maps.v2.API_KEY"
-		android:value="AIzaSyDXCpH_ZdCdIFJ7ktCHjNfmtU250-_IOR8" />
+		android:value="AIzaSyC7pYs4ceyYSMNPomRlKgeAgdXtbM930pQ" />
 
 			<meta-data
         android:name="com.google.android.gms.version"
