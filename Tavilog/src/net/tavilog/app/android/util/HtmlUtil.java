@@ -1,10 +1,10 @@
-package net.tavilog.util;
+package net.tavilog.app.android.util;
 
 import java.io.InputStream;
 import java.net.URL;
 
 import net.tavilog.R;
-import net.tavilog.constants.MassageConstants;
+import net.tavilog.app.android.constants.MassageConstants;
 
 import org.apache.commons.lang3.StringUtils;
 

@@ -1,14 +1,14 @@
-package net.tavilog.fragment;
+package net.tavilog.app.android.fragment;
 
 import java.util.List;
 
 import net.tavilog.R;
-import net.tavilog.data.api.GNaviShopRequest;
-import net.tavilog.data.api.GnaviShopResponse;
-import net.tavilog.data.api.HotpepperShopRequest;
-import net.tavilog.data.api.HotpepperShopResponse;
-import net.tavilog.exception.MapInitException;
-import net.tavilog.util.HtmlUtil;
+import net.tavilog.app.android.data.api.GNaviShopRequest;
+import net.tavilog.app.android.data.api.GnaviShopResponse;
+import net.tavilog.app.android.data.api.HotpepperShopRequest;
+import net.tavilog.app.android.data.api.HotpepperShopResponse;
+import net.tavilog.app.android.exception.MapInitException;
+import net.tavilog.app.android.util.HtmlUtil;
 
 import org.json.JSONObject;
 import org.xmlpull.v1.XmlPullParser;

@@ -1,38 +1,38 @@
-package net.tavilog.data.api;
+package net.tavilog.app.android.data.api;
 
-import net.tavilog.constants.ApiConstants;
+import net.tavilog.app.android.constants.ApiConstants;
 
 import org.apache.commons.lang3.StringUtils;
 
-public class GNaviShopRequest {
-
+public class HotpepperShopRequest {
+	
 	private String key;
-
+	
 	private String latitude;
-
+	
 	private String longitude;
-
-	private String range;
-
-	private String sort;
-
+	
+	private String order;
+	
+	private String format;
+	
 	public String getRequestUrl(){
 		StringBuffer sbf = new StringBuffer();
-		sbf.append(ApiConstants.API_URL_GNAVI);
-		sbf.append("keyid=");
+		sbf.append(ApiConstants.API_URL_HOTPEPPER);
+		sbf.append("key=");
 		if(StringUtils.isBlank(key)){
-			sbf.append(ApiConstants.API_KEY_GNAVI);
+			sbf.append(ApiConstants.API_KEY_RECRUIT);
 		} else {
 			sbf.append(key);
 		}
-		sbf.append("&latitude=");
+		sbf.append("&lat=");
 		sbf.append(latitude);
-		sbf.append("&longitude=");
-		sbf.append(longitude);
-		sbf.append("&range=");
-		sbf.append(range);
-		sbf.append("&sort=");
-		sbf.append(sort);
+		sbf.append("&lng=");
+		sbf.append(longitude);	
+		sbf.append("&order=");
+		sbf.append(order);
+		sbf.append("&format=");
+		sbf.append(format);		
 		return sbf.toString();
 	}
 
@@ -60,20 +60,20 @@ public class GNaviShopRequest {
 		this.longitude = longitude;
 	}
 
-	public String getRange() {
-		return range;
+	public String getOrder() {
+		return order;
 	}
 
-	public void setRange(String range) {
-		this.range = range;
+	public void setOrder(String order) {
+		this.order = order;
 	}
 
-	public String getSort() {
-		return sort;
+	public String getFormat() {
+		return format;
 	}
 
-	public void setSort(String sort) {
-		this.sort = sort;
+	public void setFormat(String format) {
+		this.format = format;
 	}
 
 }

@@ -1,4 +1,4 @@
-package net.tavilog.data.api;
+package net.tavilog.app.android.data.api;
 
 import java.io.IOException;
 import java.util.ArrayList;

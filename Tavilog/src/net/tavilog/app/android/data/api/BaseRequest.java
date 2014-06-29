@@ -1,4 +1,4 @@
-package net.tavilog.data.api;
+package net.tavilog.app.android.data.api;
 
 
 public abstract class BaseRequest {

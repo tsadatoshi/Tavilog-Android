@@ -1,4 +1,4 @@
-package net.tavilog.fragment;
+package net.tavilog.app.android.fragment;
 
 import net.tavilog.R;
 import android.app.Fragment;

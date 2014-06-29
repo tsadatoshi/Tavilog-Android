@@ -1,4 +1,4 @@
-package net.tavilog.exception;
+package net.tavilog.app.android.exception;
 
 public class MapInitException extends Exception {
 	/**

@@ -1,4 +1,4 @@
-package net.tavilog.async;
+package net.tavilog.app.android.async;
 
 import android.content.AsyncTaskLoader;
 import android.content.Context;

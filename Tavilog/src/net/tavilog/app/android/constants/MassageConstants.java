@@ -1,4 +1,4 @@
-package net.tavilog.constants;
+package net.tavilog.app.android.constants;
 
 public class MassageConstants {
 	// ERROR

@@ -1,7 +1,7 @@
-package net.tavilog.fragment;
+package net.tavilog.app.android.fragment;
 
 import net.tavilog.R;
-import net.tavilog.exception.MapInitException;
+import net.tavilog.app.android.exception.MapInitException;
 
 import com.androidquery.AQuery;
 import com.google.android.gms.maps.CameraUpdateFactory;
